@@ -5,6 +5,7 @@
 !.gitignore
 !index.html
 !PROTERRA_logo.svg
+!og.jpg
 
 # Conservar solo los assets que usa la web
 !recursos/
