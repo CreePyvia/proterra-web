@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="480" height="480">
+  <!-- PROTERRA · isotipo (vectorizado del arte aprobado por el cliente).
+       P itálica en tres piezas: barra superior (el brazo de la máquina),
+       asta diagonal con remate de cuchilla (el corte del talud) y
+       chevrón amarillo (la cuchara del minicargador cargada de tierra). -->
+  <polygon fill="#141414" points="41,3 114.8,3 108.8,27.4 15.7,27.4"/>
+  <path fill="#141414" d="M24.5 37.9 H63.5 L41.8 59.05 Q39.9 60.9 39.7 63.4 L37.1 84.8 L5.3 115 L10.2 83.7 L14.1 60.6 L17.6 41.4 Q18.6 37.9 24.5 37.9 Z"/>
+  <polygon fill="#FFBF00" points="89.5,28.3 108.5,28.3 106,47.7 83.8,68.3 47.5,68.3"/>
+</svg>

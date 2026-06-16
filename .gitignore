@@ -1,0 +1,16 @@
+# Ignorar todo por defecto: solo publicamos la web y sus assets
+/*
+
+# Conservar la web
+!.gitignore
+!index.html
+!PROTERRA_logo.svg
+
+# Conservar solo los assets que usa la web
+!recursos/
+recursos/*
+!recursos/minicargador amarillo.png
+!recursos/video comercial proterra.mp4
+!recursos/obra-1.png
+!recursos/obra-2.png
+!recursos/obra-3.png
