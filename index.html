@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PROTERRA · Ingeniería y Movimientos de Tierra</title>
-<meta name="description" content="PROTERRA — ingeniería y movimientos de tierra. Arrendamiento de maquinaria pesada, excavación, nivelación y demolición. Cotiza en línea y agenda tu cita.">
+<meta name="description" content="PROTERRA — ingeniería y movimientos de tierra. Arrendamiento de maquinaria pesada, excavación, nivelación y demolición en Cartagena y alrededores. Solicita tu cotización por WhatsApp.">
 <link rel="icon" href="PROTERRA_logo.svg">
 
 <!-- Open Graph / vista previa al compartir (WhatsApp, Facebook, etc.) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="PROTERRA">
 <meta property="og:title" content="PROTERRA · Ingeniería y Movimientos de Tierra">
-<meta property="og:description" content="Arrendamiento de maquinaria pesada, excavación y movimientos de tierra. Cotiza en línea y agenda tu cita.">
+<meta property="og:description" content="Arrendamiento de maquinaria pesada, excavación y movimientos de tierra en Cartagena. Solicita tu cotización por WhatsApp.">
 <meta property="og:url" content="https://creepyvia.github.io/proterra-web/">
 <meta property="og:image" content="https://creepyvia.github.io/proterra-web/og.jpg">
 <meta property="og:image:secure_url" content="https://creepyvia.github.io/proterra-web/og.jpg">
@@ -23,7 +23,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PROTERRA · Ingeniería y Movimientos de Tierra">
-<meta name="twitter:description" content="Arrendamiento de maquinaria pesada, excavación y movimientos de tierra. Cotiza en línea.">
+<meta name="twitter:description" content="Arrendamiento de maquinaria pesada, excavación y movimientos de tierra en Cartagena.">
 <meta name="twitter:image" content="https://creepyvia.github.io/proterra-web/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -165,11 +165,19 @@
   .fleet .specs .v{font-family:'Rajdhani';font-weight:700;font-size:26px;margin-top:4px}
   .fleet .info .foot{margin-top:24px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
 
-  /* ================= COTIZADOR ================= */
-  .quote{background:var(--asfalto)}
-  .quote .box{display:grid;grid-template-columns:1fr .8fr;border:1px solid var(--line)}
-  .quote .form{padding:42px;border-right:1px solid var(--line)}
-  .quote .out{padding:42px;background:var(--negro);display:flex;flex-direction:column}
+  /* ================= COBERTURA ================= */
+  .cover{background:var(--asfalto)}
+  .cover .box{display:grid;grid-template-columns:1fr .8fr;border:1px solid var(--line)}
+  .cover .zones{padding:20px 42px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+  .cover .z{display:flex;align-items:center;gap:16px;padding:19px 0;border-bottom:1px solid var(--line)}
+  .cover .z:last-child{border-bottom:none}
+  .cover .z .dot{width:8px;height:8px;background:var(--amber);border-radius:50%;flex:none;box-shadow:0 0 10px rgba(255,191,0,.55)}
+  .cover .z .dot.alt{background:var(--acero);box-shadow:none}
+  .cover .z .name{font-family:'Rajdhani';font-weight:700;font-size:21px;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
+  .cover .z .sub{font-family:'Space Mono';font-size:10.5px;color:var(--gris);margin-top:3px}
+  .cover .z .st{margin-left:auto;font-family:'Space Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(255,191,0,.35);padding:6px 10px;white-space:nowrap}
+  .cover .z .st.alt{color:var(--gris);border-color:var(--line2)}
+  .cover .out{padding:42px;background:var(--negro);display:flex;flex-direction:column}
   label{display:block;font-family:'Space Mono';font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin:0 0 9px}
   .field{margin-bottom:24px}
   select,input[type=text],input[type=tel],input[type=email],input[type=number],input[type=date],textarea{
@@ -183,15 +191,14 @@
   .opts .opt span{display:block;border:1px solid var(--line2);padding:12px;text-align:center;cursor:pointer;
     font-family:'Rajdhani';font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;transition:.2s}
   .opts .opt input:checked + span{border-color:var(--amber);background:rgba(255,191,0,.08);color:var(--amber)}
-  .quote .out .role{font-family:'Space Mono';font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
-  .quote .out h3{font-family:'Rajdhani';font-weight:700;font-size:26px;text-transform:uppercase;margin:6px 0 24px}
-  .quote .line{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);font-size:14px;color:#cfcbc1}
-  .quote .line .v{font-family:'Space Mono';color:var(--hueso)}
-  .quote .total{display:flex;justify-content:space-between;align-items:baseline;margin-top:22px;padding-top:18px;border-top:2px solid var(--amber)}
-  .quote .total .k{font-family:'Rajdhani';font-weight:700;font-size:20px;text-transform:uppercase}
-  .quote .total .v{font-family:'Rajdhani';font-weight:700;font-size:40px;color:var(--amber);line-height:1}
-  .quote .out .note{font-family:'Space Mono';font-size:10px;color:var(--acero);margin-top:14px;line-height:1.7}
-  .quote .out .btn{margin-top:22px;justify-content:center}
+  .cover .out .role{font-family:'Space Mono';font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+  .cover .out h3{font-family:'Rajdhani';font-weight:700;font-size:26px;text-transform:uppercase;margin:6px 0 18px}
+  .cover .out .desc{font-size:14.5px;line-height:1.7;color:#bfbbb1}
+  .cover .feats{list-style:none;margin:18px 0 0;padding:0}
+  .cover .feats li{display:flex;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px;color:#cfcbc1}
+  .cover .feats li::before{content:'▸';color:var(--amber);font-family:'Space Mono';font-size:12px}
+  .cover .out .note{font-family:'Space Mono';font-size:10px;color:var(--acero);margin-top:14px;line-height:1.7}
+  .cover .out .btn{margin-top:22px;justify-content:center}
 
   /* ================= GALERÍA ================= */
   .work{background:var(--negro)}
@@ -286,8 +293,8 @@
     .serv .grid .card:nth-child(3n){border-right:1px solid var(--line)}
     .serv .grid .card:nth-child(2n){border-right:none}
     .serv .grid .card:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
-    .fleet .unit,.quote .box,.book .grid,.contact .grid{grid-template-columns:1fr}
-    .fleet .photo,.quote .form,.book .cal,.contact .col.l{border-right:none;border-bottom:1px solid var(--line)}
+    .fleet .unit,.cover .box,.book .grid,.contact .grid{grid-template-columns:1fr}
+    .fleet .photo,.cover .zones,.book .cal,.contact .col.l{border-right:none;border-bottom:1px solid var(--line)}
     .work .grid{grid-template-columns:repeat(2,1fr)}
   }
   @media(max-width:680px){
@@ -327,7 +334,7 @@
     <div class="links" id="links">
       <a href="#servicios">Servicios</a>
       <a href="#flota">Flota</a>
-      <a href="#cotizador">Cotizador</a>
+      <a href="#cobertura">Cobertura</a>
       <a href="#obras">Obras</a>
       <a href="#agenda">Agenda</a>
       <a class="btn solid" href="#contacto">Cotizar ahora</a>
@@ -352,7 +359,7 @@
     <h1 class="reveal in">Movemos la tierra<br>con <em>precisión</em></h1>
     <p class="lead reveal in">Arrendamiento de maquinaria pesada, excavación, nivelación y movimientos de tierra. Potencia compacta y trabajo medido — obra tras obra.</p>
     <div class="cta reveal in">
-      <a class="btn solid" href="#cotizador">
+      <a class="btn solid" href="#contacto">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
         Cotizar arrendamiento
       </a>
@@ -385,7 +392,7 @@
       <div class="card"><span class="n">02</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l6-6 4 4 8-8M21 7v5M21 7h-5"/></svg></div><h3>Nivelación y compactación</h3><p>Preparación y nivelado de terrenos con control de cotas para una base firme y precisa.</p></div>
       <div class="card"><span class="n">03</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 22V8l8-5 8 5v14M9 22v-6h6v6M9 11h.01M15 11h.01"/></svg></div><h3>Demolición controlada</h3><p>Demolición y retiro de estructuras con manejo responsable de escombros y residuos.</p></div>
       <div class="card"><span class="n">04</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 9h13v8H1zM14 11h4l3 3v3h-7M5.5 17a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0zM16.5 17a1.5 1.5 0 103 0 1.5 1.5 0 00-3 0z"/></svg></div><h3>Transporte y acarreo</h3><p>Traslado de material y maquinaria a obra con logística puntual y segura.</p></div>
-      <div class="card"><span class="n">05</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8v12H4V8M2 8l2-4h16l2 4zM10 13h4"/></svg></div><h3>Arrendamiento de maquinaria</h3><p>Renta de equipo con o sin operador, por día, semana o proyecto. Cotiza en línea al instante.</p></div>
+      <div class="card"><span class="n">05</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8v12H4V8M2 8l2-4h16l2 4zM10 13h4"/></svg></div><h3>Arrendamiento de maquinaria</h3><p>Renta de equipo con o sin operador, por horas o por proyecto. Cotización a la medida de tu obra.</p></div>
       <div class="card"><span class="n">06</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg></div><h3>Asesoría e ingeniería</h3><p>Planeación, cálculo de volúmenes y acompañamiento técnico en cada etapa del proyecto.</p></div>
     </div>
   </div>
@@ -410,7 +417,7 @@
           <div class="s"><div class="k">Caudal hidráulico</div><div class="v">85 L/min</div></div>
         </div>
         <div class="foot">
-          <a class="btn solid" href="#cotizador">Cotizar esta unidad</a>
+          <a class="btn solid" href="#contacto">Cotizar esta unidad</a>
           <span class="anno">Disponibilidad sujeta a agenda</span>
         </div>
       </div>
@@ -419,56 +426,34 @@
   <span class="reg tl"></span><span class="reg br"></span>
 </section>
 
-<!-- ===================== COTIZADOR ===================== -->
-<section class="quote pad" id="cotizador">
+<!-- ===================== COBERTURA ===================== -->
+<section class="cover pad" id="cobertura">
   <div class="wrap">
-    <div class="sh reveal"><div class="big">03</div><div><span class="anno tag">[ Estimado en línea / 03 ]</span><h2>Cotizador de <em>arrendamiento</em></h2></div></div>
+    <div class="sh reveal"><div class="big">03</div><div><span class="anno tag">[ Cobertura / 03 ]</span><h2>Zonas de <em>cobertura</em></h2></div></div>
     <div class="box reveal">
-      <div class="form">
-        <div class="field">
-          <label>Máquina</label>
-          <select id="q-machine">
-            <option value="262d3|450000">Minicargador CAT 262D3 — $450.000 / día</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Aditamento</label>
-          <select id="q-attach">
-            <option value="0|Cucharón estándar (incluido)">Cucharón estándar — incluido</option>
-            <option value="120000|Martillo hidráulico">Martillo hidráulico — +$120.000 / día</option>
-            <option value="90000|Barredora">Barredora — +$90.000 / día</option>
-            <option value="80000|Ahoyadora">Ahoyadora — +$80.000 / día</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Modalidad</label>
-          <div class="opts" id="q-op">
-            <label class="opt"><input type="radio" name="op" value="0|Sin operador" checked><span>Sin operador</span></label>
-            <label class="opt"><input type="radio" name="op" value="150000|Con operador"><span>Con operador</span></label>
-          </div>
-        </div>
-        <div class="field">
-          <label>Días de renta: <b class="amb" id="q-dval">3</b></label>
-          <input type="range" id="q-days" min="1" max="30" value="3" style="width:100%">
-        </div>
-        <div class="field">
-          <label>Traslado a obra (km, aprox.)</label>
-          <input type="number" id="q-km" min="0" value="10" placeholder="0">
-        </div>
+      <div class="zones">
+        <div class="z"><span class="dot"></span><div><div class="name">Cartagena urbana</div><div class="sub">Base de operaciones · mínimo 4 horas</div></div><span class="st">Disponible</span></div>
+        <div class="z"><span class="dot"></span><div><div class="name">Zona Industrial Mamonal</div><div class="sub">Obra industrial y portuaria</div></div><span class="st">Disponible</span></div>
+        <div class="z"><span class="dot"></span><div><div class="name">Turbaco</div><div class="sub">Fuera de Cartagena · mínimo 8 horas</div></div><span class="st">Disponible</span></div>
+        <div class="z"><span class="dot"></span><div><div class="name">Pasacaballos</div><div class="sub">Fuera de Cartagena · mínimo 8 horas</div></div><span class="st">Disponible</span></div>
+        <div class="z"><span class="dot"></span><div><div class="name">Arjona</div><div class="sub">Fuera de Cartagena · mínimo 8 horas</div></div><span class="st">Disponible</span></div>
+        <div class="z"><span class="dot alt"></span><div><div class="name">¿Otra zona?</div><div class="sub">Consúltanos disponibilidad para tu municipio</div></div><span class="st alt">Por consulta</span></div>
       </div>
       <div class="out">
-        <span class="role">Estimado referencial</span>
-        <h3>Tu cotización</h3>
-        <div class="line"><span id="o-mname">CAT 262D3</span><span class="v" id="o-base">$0</span></div>
-        <div class="line"><span id="o-aname">Aditamento</span><span class="v" id="o-att">$0</span></div>
-        <div class="line"><span id="o-opname">Operador</span><span class="v" id="o-op">$0</span></div>
-        <div class="line"><span id="o-tname">Traslado</span><span class="v" id="o-tr">$0</span></div>
-        <div class="total"><span class="k">Total est. <span style="font-size:12px;color:var(--gris)">COP</span></span><span class="v" id="o-total">$0</span></div>
-        <div class="note">* Tarifas referenciales en pesos colombianos (COP) para fines de demostración. La cotización formal se confirma según disponibilidad, IVA y condiciones de obra.</div>
-        <button class="btn solid" id="q-send">
+        <span class="role">Cotización a tu medida</span>
+        <h3>Cada obra es distinta</h3>
+        <p class="desc">Las condiciones cambian según las horas de trabajo, la ubicación de la obra y la modalidad del servicio. Por eso preparamos cada propuesta a la medida — cuéntanos qué necesitas y te la enviamos.</p>
+        <ul class="feats">
+          <li>Servicio con o sin operador</li>
+          <li>Combustible del cliente o incluido</li>
+          <li>Transporte a obra cotizado según ubicación</li>
+          <li>Disponibilidad sujeta a agenda</li>
+        </ul>
+        <div class="note">* Propuesta formal por escrito, con condiciones claras antes de iniciar el servicio.</div>
+        <a class="btn solid" id="cov-wa" href="#" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.477-.607z"/></svg>
-          Enviar por WhatsApp
-        </button>
+          Cotizar por WhatsApp
+        </a>
       </div>
     </div>
   </div>
@@ -575,7 +560,7 @@
         <ul>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#flota">Flota</a></li>
-          <li><a href="#cotizador">Cotizador</a></li>
+          <li><a href="#cobertura">Cobertura</a></li>
           <li><a href="#obras">Obras</a></li>
           <li><a href="#agenda">Agendar cita</a></li>
         </ul>
@@ -616,7 +601,6 @@ const PROTERRA = {
 
 /* ---- helpers ---- */
 const $ = s => document.querySelector(s);
-const fmt = n => '$' + Math.round(n).toLocaleString('es-CO');
 const waLink = txt => `https://wa.me/${PROTERRA.whatsapp}?text=${encodeURIComponent(txt)}`;
 function openWA(txt){ window.open(waLink(txt), '_blank'); toast('Abriendo WhatsApp con tus datos…'); }
 let toastT;
@@ -676,51 +660,13 @@ OBRAS.forEach(o=>{
 });
 
 /* ============================================================
-   COTIZADOR
+   COBERTURA → WhatsApp
    ============================================================ */
-const Q = {
-  days:$('#q-days'), dval:$('#q-dval'), machine:$('#q-machine'), attach:$('#q-attach'), km:$('#q-km')
-};
-function quote(){
-  const days = +Q.days.value;
-  const [, mRate] = Q.machine.value.split('|'); // machine value: "262d3|450000"
-  const mName = Q.machine.options[Q.machine.selectedIndex].text.split('—')[0].trim();
-  const [aCost, aName] = Q.attach.value.split('|');
-  const [opCost, opName] = document.querySelector('input[name=op]:checked').value.split('|');
-  const km = Math.max(0, +Q.km.value || 0);
-  const base = (+mRate) * days;
-  const att  = (+aCost) * days;
-  const op   = (+opCost) * days;
-  const tras = km * 4000; // $4.000 COP por km referencial
-  const total = base + att + op + tras;
-
-  Q.dval.textContent = days;
-  $('#o-mname').textContent = `${mName} · ${days} día${days>1?'s':''}`;
-  $('#o-base').textContent = fmt(base);
-  $('#o-aname').textContent = aName;
-  $('#o-att').textContent = att?fmt(att):'Incluido';
-  $('#o-opname').textContent = opName;
-  $('#o-op').textContent = op?fmt(op):'—';
-  $('#o-tname').textContent = `Traslado · ${km} km`;
-  $('#o-tr').textContent = tras?fmt(tras):'—';
-  $('#o-total').textContent = fmt(total);
-  return {mName,days,aName,opName,km,total};
-}
-['input','change'].forEach(ev=>['#q-days','#q-machine','#q-attach','#q-km'].forEach(s=>$(s).addEventListener(ev,quote)));
-document.querySelectorAll('input[name=op]').forEach(r=>r.addEventListener('change',quote));
-quote();
-$('#q-send').addEventListener('click',()=>{
-  const q = quote();
-  const msg = `*Solicitud de cotización — PROTERRA*\n`+
-    `Máquina: ${q.mName}\n`+
-    `Aditamento: ${q.aName}\n`+
-    `Modalidad: ${q.opName}\n`+
-    `Días: ${q.days}\n`+
-    `Traslado: ${q.km} km\n`+
-    `*Estimado: ${fmt(q.total)} COP*\n\n`+
-    `¿Me confirman disponibilidad y cotización formal?`;
-  openWA(msg);
-});
+$('#cov-wa').href = waLink(
+  'Hola PROTERRA, quiero cotizar el arrendamiento del minicargador CAT 262D3.\n'+
+  'Ubicación de la obra: \n'+
+  'Horas o días estimados: \n'+
+  '¿Con o sin operador?: ');
 
 /* ============================================================
    CALENDARIO
